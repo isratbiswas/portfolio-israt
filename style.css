@@ -1,5 +1,6 @@
 
 
+
 *{
     margin: 0;
     padding: 0;
@@ -16,112 +17,526 @@ body {
     min-height: 100vh;
     margin: 0;
 }
-
-
-/* -----navbar ---- */
+.navbar{
+    display: flex;
+    justify-content: space-between
+    
+}
 
 .navbar-container{
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin: 25px;
-    text-align: center;
-}  
-
-.navbar{
-    display: flex;
+    justify-content: space-evenly;
+    margin-top: 2rem;
 }
- .nav-left img{
-    width: 98px;
-    height: 50px;
+.nav-left img{
+    width: 80px;
+    height: auto;
     border-radius: 50%;
-    
-} 
+    margin-right: 1.7rem;
+}
+
 .nav-subtitle{
-    font-size: 25px;
-    margin: 10px;
+    margin-top: .6rem;
+    font-size: 1.2rem;
 }
-.nav-item{
-    
+
+.nav-item {
+    margin-bottom: .6rem;
+}
+
+.nav-item a {
+    font-size: 1.rem;
+    color:black ;
+    margin-right: 1rem;
+}
+
+.nav-menu ul li .active, .menu:hover  {
+    color:#E85C0D ;
+}
+/* hero section */
+.hero-left img{
+    width: 280px;
+    border-radius: 50%;
+    margin-left: 2.7rem;
+    margin-top: 2rem;
+}
+
+.hero-intro {
+    margin-left: 1rem;
+}
+.hero-intro h1{
+    font-size: 2rem;
+    margin: 1rem;
+}
+.hero-intro p{
+    font-size: 1rem;
+    margin: 1rem;
+}
+
+/* resume */
+.resume-title{
+    text-align: center;
+    margin-top: 3.2rem;
+    font-size: 2rem;
+}
+.resume-subtitle,.certificate-subtitle,.skill-subtitle, .project-subtitle, .contact-subtitle1, .contact-subtitle2{
+    text-align: center;
+    margin-top: 3.2rem;
+    font-size: 1.4rem;
+}
+.resume-right{
+    text-align: center;
+}
+
+.line, .cer-line,.skill-line, .project-line, .contact-line{
+    background-color:#a09a9a;
+    width: 8rem;
+    height: 2px;
+    margin: 0.25rem 0 0.25rem 0;
+    text-align: center;
+    margin-left: 8rem;
+}
+.inner-line,.cer-inner-line ,.skill-inner-line ,.project-inner-line, .contact-inner-line{
+    background-color:#D91656;
+    width: 6rem;
+    height: 2px;
+    margin: 0.25rem 0 0.25rem 0;
+    text-align: center;
+}
+.resume-list{
+    position: relative;
     display: flex;
-    float: right;
-    margin-right: 13px;
-    margin: 13px; 
-    flex-wrap: wrap; 
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid  rgb(136, 136, 136);
+    margin-left: 2.6rem;
+   
 }
-ul li a{
+.resume-duration-container{
+     display: flex;
+     justify-content: center;
+     align-items: center;
+}
+.round-div{
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+    border: 1px solid rgb(102, 99, 99);
+    background-color: #fff;
+    position: absolute;
+    left: -13px;
+    margin-left: .1rem;
+}
+.resume-duration{
+    background-color: #f9a70d;
+    width: auto;
+    border-radius: 1.5rem;
+    margin:1rem 1rem;
+    padding: 0.5rem .7rem;
+    font-size: .76rem;
+    line-height: 1rem;
+    text-align: center;
+}
+.resume-description h2{
+ font-size: 1.1rem;
+ line-height: 1.2rem;
+ margin-bottom: .5rem;
+}
+.resume-description h3{
+    font-size: .9rem;
+    line-height: 1.25rem;
+    margin: 0;
+    color: gray;   
+}
+
+/* ===certificates==== */
+
+.certificate-data{
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 1.5rem;
+    border: 1px solid rgb(202, 198, 198);
+    margin-left: 1.2rem;
+    margin-right: 1.2rem;
+    border-radius: 8px;
+}
+.data-img1 img{
+    width:80px ;
+    margin-right: 4.3rem;
+  
+}
+.data-info {
+    margin-top: .5rem;
+}
+.data-info a{
+    color: #a09a9a;
+ 
+}
+.data-img2 img {
+     width:150px;
+     margin-right: 3rem;
+}
+/* ====skills===== */
+
+.skill-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 1rem;
+    margin-right: 1.5rem;
+    margin-left: 1.5rem;
+}
+.skills-progress-container {
+    margin: 1rem 0;
+}
+.skill-sub-container h2{
+     font-size: 1.6rem;
+     margin: 1.3rem;
+}
+
+.skills-progress {
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.skill {
+    font-size: 18px;
+}
+.percentage {
+    color: #757474;
+    font-size: 16px;
+} 
+.progress {
+    height: 0.5rem;
+  width: 100%;
+    border: 1px solid #a89f9f;
+    border-radius: 0.5rem;
+    accent-color: #444;
+}
+progress::-webkit-progress-value {
+    background-color:#f9a70d;
+}
+
+
+/* portfolio */
+.projects {
+    margin-left: 1rem;
+    margin-right: 1rem;
+    max-width: 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 2.5rem;
+    border-radius: .8rem;
+   
+}
+
+.projects img{
+    max-width: 328px;
+    margin-bottom: 1.2rem;
+    border-radius: .8rem;
+}
+.projects h4{
+    font-size: 1.2rem;
+    margin-left: .6rem;
+}
+.projects p{
+    font-size: 1.2rem;
+    margin-left: .6rem;
+    color: #7e7b7b;
+    margin-bottom: 1rem;
+}
+.projects a{
+    font-size: 1.2rem;
+    margin-left: .8rem;
+    color: #7e7b7b;
+    margin-bottom: 4rem;
+}
+
+/*====== contact====== */
+
+.contact-info{
+    margin-left: 7rem;
+    margin-top: 1.5rem;
+    margin-bottom: 1.8rem;
+}
+
+.contact-info a, p {
     color: black;
     font-size: 1.2rem;
-    font-weight: bold;
-    margin: 13px; 
+   
 }
-.nav-list-item:hover  {
+form{
+    display: block;
+}
+
+.input-field{
+    background-color: transparent;
+    border: 2px solid #9e9797;
+    border-radius: 2px;
+    width: 85%;
+    padding: 0.74rem;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+    margin-left:1rem ;
+    margin-right: 1rem;
+}
+.input-field:focus{
+    outline: none;
+}
+
+.contact-btn{
     background-color: #f9a70d;
-    border: 1px solid rgb(192, 188, 188);
-    border-radius: 10px;
-   
-   
-}
-hr{
-    height: 1px;
-    border: 0;
-    background-color: rgb(161, 155, 155);
-}
-
-/*----- hero section----- */
-
-.hero-container{
-    display: flex;
-   justify-content: space-between;
-    align-items: center;
-    min-width: 100vh;
-    margin-top: 50px;
-    /* flex-wrap: wrap; */
+    border: 1px solid gray;
+    padding: .5rem 1.3rem;
+    border-radius: 1rem;
+    font-size: 1rem;
+    line-height:1.5rem ;
+    font-weight: 400;
+    margin-left: 1.2rem;
+    margin-bottom: 1.4rem;
 }
 
-.hero-left img{
-   max-width:100% ;
-   border-radius: 50%;
-   height: auto;
-   margin: 0 auto;
-   display: block;
+.contact-btn:hover{
+     background-color: white;  
+    cursor: pointer;
 }
 
-.hero-intro, .hero-left{
-    /* margin-right: 15px;
-    margin: 10px; */
-    width: 100%;
+/*====== footer===== */
+footer{
+    background-color:#011e4a ;
 }
-.title{
-    /* text-align: center; */
-    margin: 15px;
-    font-size: 3rem;
-    font-weight: bold; 
+.footer{ 
+  text-align: center;
+  margin-top: 1.4rem;
 }
-.hero-container .title{
-    text-align:left;
-    padding: 1rem; 
-}
-.hero-intro .description{
-    padding:0 1rem ;
-    font-size: 1.2rem;
-    line-height: 2rem;
-     text-align: justify;
+.footer-icon{
+    margin-bottom: 1.2rem;
 }
 
-/* resume---- */
-
-.resume{
-    margin-top: 60px;
+.footer-icon a{
+    color: #fff;
+    font-size: 1.6rem;
+   margin: 1.4rem;
+ 
 }
-.resume-container{
+
+
+.footer-text p {
+    color: #fff;
+ 
+}
+
+/*=== tablet====== */
+@media screen and (min-width:768px) and (max-width: 992px) {
+   .navbar {
+    margin: 2rem;
+   }
+    .nav-item{
+        display: flex;
+        margin: 2.2rem;
+    }
+    .nav-item li a{
+        font-size: 1.3rem;
+    }
+    .hero-container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 5rem;
+        margin-bottom: 6rem;
+    }
+    .hero-intro h1{
+        font-size: 2.4rem;
+    }
+    .hero-intro p{
+        font-size: 1.4rem;
+        color: #757474;
+    }
+    .resume-left img{
+        margin-left: 16rem;
+        margin-top: 4rem;
+        
+    }
+    .resume-subtitle,.certificate-subtitle,.skill-subtitle, .project-subtitle, .contact-subtitle1, .contact-subtitle2{
+        font-size: 2.2rem;
+    }
+    .resume-right{
+        text-align: center;
+    }
+    
+    .line, .cer-line,.skill-line, .project-line, .contact-line{
+        background-color:#a09a9a;
+        width: 12rem;
+        height:4px;
+        margin: 0.25rem 0 0.25rem 0;
+        text-align: center;
+        margin-left: 23rem;
+        margin-bottom: 3rem;
+    }
+    .inner-line,.cer-inner-line ,.skill-inner-line ,.project-inner-line, .contact-inner-line{
+        background-color: #f9a70d;
+        width: 7rem;
+        height: 4px;
+        margin: 0.25rem 0 0.25rem 0;
+       
+    }
+    .resume-list{
+        margin-left: 6.6rem;
+    }
+    
+    .round-div{
+        margin-left: .1rem;
+    }
+    .resume-duration{
+          padding: 0.9rem .7rem;
+        font-size: 1.4rem;
+        margin-bottom: .5rem;
+       
+       
+    }
+    .resume-description h2{
+      font-size: 1.5rem;
+      font-weight: bold;
+      line-height: 1.2rem;
+      margin-bottom: .5rem;
+    }
+    .resume-description h3{
+        font-size: 1.6rem;
+       
+       
+    }
+    /* ====certificates==== */
+    
+    .certificate-sub-container{
+        display: grid;
+        grid-template-columns: 1fr;
+
+    }
+
+    .certificate-data{
+        display: flex;
+        justify-content: space-between;
+        margin-top: 1.5rem;
+        border: 1px solid rgb(112, 112, 112);
+        margin-left: 4.2rem;
+        margin-right: 4.2rem;
+        border-radius: 8px;
+        box-shadow:   0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+    .data-img1 img{
+        width:200px ;
+        
+      
+    }
+    .data-info {
+        margin-top: 1.5rem;
+        margin-right: 4rem;
+    }
+    .data-info h4{
+        font-size:1.9rem ;
+    }
+    .data-info h5{
+        font-size:1.9rem ;
+        margin-bottom: 2rem;
+    }
+    .data-info a{
+      
+        font-size: 1.5rem;
+        color: #a09a9a;
+     
+    }
+    .data-img2 img {
+         width:350px;
+        
+    }
+
+    /*====== project======= */
+
+    .project-container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .projects img{
+        max-width: 424px;
+        margin-bottom: 1.2rem;
+        border-radius: .8rem;
+    }
+
+    /* ====footer */
+    .footer-icon{
+        margin-bottom: 1.6rem;
+    }
+    .footer-icon a{
+        color: #fff;
+        font-size: 2.6rem;
+        margin: 1.4rem;
+    }
+    
+    .footer-text p {
+        color: #fff;
+        font-size: 2.1rem;
+    }
+}
+
+/*======= Desktop===== */
+@media screen and (min-width:993px){
+    .navbar {
+        margin: 1rem;
+       }
+       .nav-left img{
+        width: 120px;
+        margin-right: 5rem;
+       }
+       .nav-subtitle h3{
+        font-size: 1.6rem;
+        margin-top: 1rem;
+       }
+        .nav-item{
+            display: flex;
+            margin: 2.2rem;
+        }
+        .nav-item li a{
+            font-size: 1.3rem;
+        }
+        .hero-container {
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 10rem;
+            margin-bottom: 2rem;
+        }
+
+        .hero-left img{
+            width: 400px;
+            height: auto;
+            margin-left: 8rem;
+        }
+
+        .hero-intro {
+            margin-top: 3rem;
+            margin-left: 16rem;
+        }
+        .hero-intro h1{
+            font-size: 2.6rem;
+        }
+
+        .hero-intro p {
+            font-size: 1.4rem;
+        }
+
+        /* =====resume===== */
+        
+   .resume{
+    margin-top: 18rem;
+   }
+/* .resume-container{
     margin-top: 1rem;
-}
+} */
 
 .resume-sub-container{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    
 }
    
 .resume-title{
@@ -142,6 +557,7 @@ hr{
     width: 100px;
     height: 2px;
     margin: 0.25rem 0 0.25rem 0;
+    margin-left: 8rem;
 }
 
 .inner-line{
@@ -149,7 +565,23 @@ hr{
     width: 70px;
     height: 2px;
     margin: 0.25rem 0 0.25rem 0;
+    
 }
+.ed-line {
+    background-color:#a09a9a;
+    width: 100px;
+    height: 2px;
+    margin: 0.25rem 0 0.25rem 0;
+    margin-left: 13.7rem;
+}
+.ed-inner-line{
+    background-color:#D91656;
+    width: 70px;
+    height: 2px;
+    margin: 0.25rem 0 0.25rem 0;
+    
+}
+
 .resume-list{
     position: relative;
     display: flex;
@@ -202,82 +634,56 @@ hr{
     color: gray;   
 }
 
-/* certificates ---- */
-.container{
-    margin: 100px;
-}
-
-.certificate-subtitle, .project-subtitle, .contact-subtitle1,
-.contact-subtitle2, .skill-subtitle{
-    color: black;
-    text-align: center;
-    font-size: 1.4rem;
-    font-weight: bold;
-    line-height: 1.5rem;
-   
-}
-
-.subtitle-container>.cer-line,.project-line, 
-.contact-line, .skill-line{
-    text-align: center;
-    margin: 0 auto;
-}
-
-.cer-line,.project-line, .contact-line, .skill-line {
-    height: 3px;
-    width: 100px;
-    background-color: #777575;
-   
-}
-.cer-inner-line, .project-inner-line, .contact-inner-line,.skill-inner-line{
-    width: 60px;
-    height: 3px;
-    background-color: #f9a70d;
-}
-
+/* =====certificates=== */
 .certificate-sub-container{
-    display: flex;
-     justify-content: space-between;
-     flex-wrap: wrap;
-     margin-top: 30px;
-     width: auto;   
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 3rem;
+
 }
 
 .certificate-data{
     display: flex;
-    border: 2px solid #c9c5c5;
-    width: 45%;
-    height: 16vh;
-    border-radius: 6px;
-    transition: transform 0.4s ease;
+    justify-content: space-between;
+    margin-top: 1.5rem;
+    border: 1px solid rgb(231, 223, 223);
+    margin-left: 4.2rem;
+    margin-right: 4.2rem;
+    border-radius: 8px;
+    box-shadow:   0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
-
-.certificate-data:hover{
-    transform: translateY(-.5rem);
+.data-img1 img{
+    width:225px ;
+    
+  
 }
-
-
-.certificate-data .data-info {
-    text-align: center;
-    justify-content: center;
-    align-items: center;
-    margin: 35px;
-    margin-left: 195px;
-    font-size: 1.2rem;
+.data-info {
+    margin-top: 1.5rem;
+    margin-right: 4rem;
 }
-
-.certificate-data .data-info a, i{
+.data-info h4{
+    font-size:1.6rem ;
+}
+.data-info h5{
+    font-size:1.4rem ;
     margin-top: 1.2rem;
-    color: gray;
-   font-size: 1rem;
+    margin-bottom: 2rem;
 }
-
-/* ----skills---- */
+.data-info a{
+    font-size: 1.1rem;
+}
+.data-img2 img {
+     width:350px;
+    
+}
+/* ====skills==== */
 .skill-container{
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: 1rem;
     margin-top: 1rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
 }
 .skills-progress-container {
     margin: 1rem 0;
@@ -299,7 +705,7 @@ hr{
 .percentage {
     color: #757474;
     font-size: 16px;
-}
+} 
 .progress {
     height: 0.5rem;
     width: 100%;
@@ -311,367 +717,76 @@ progress::-webkit-progress-value {
     background-color:#f9a70d;
 }
 
-/* ---Portfolio---- */
 
-.porject-container{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    margin: 30px;
-    height: auto;
-    width: 100%;  
+.subtitle-container>.cer-line,.project-line, 
+.contact-line, .skill-line{
+    text-align: center;
+    margin: 0 auto;
 }
 
-.projects{
-    border:1px solid rgb(212, 208, 208) ;
-     margin: 1.5rem 1rem;
-     border-radius: 1rem;
-  
-  
+.cer-line,.project-line, .contact-line, .skill-line {
+    height: 3px;
+    width: 100px;
+    background-color: #777575;
+   
 }
-.projects img{
-   max-width: 100%;
-   border-radius: 15px;
-}
-
-.projects h4{
-    font-size: 1.1rem;
-    margin: 1rem;
-}
-
-.projects p{
-   font-size: 1.1rem;
-   margin: 1rem;
-   color: gray;
-}
-
-.projects a{
-    color: black;
-    font-weight: bold;
-    font-size: 1.1rem;
-    margin-left: 28px;
-    margin-bottom: 30px;
-}
-
-/* -----contact-- */
-.contact-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-    margin: 2rem 1.5rem;
-}
-.contact-subtitle2{
-    margin-top: 2.5rem;
-}
-
-
-.contact-info p{
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
-}
-.contact-info a, p{
-    color: #696666;
-    font-weight: bold;
-    font-size: 1.2rem;
-    margin: 1rem;
-}
-
-form{
-    display: block;
-}
-
-.input-field{
-    background-color: transparent;
-    border: 2px solid #9e9797;
-    border-radius: 2px;
-    width: 90%;
-    padding: 0.74rem;
-    margin-bottom: 1rem;
-    font-size: 1rem;
-}
-.input-field:focus{
-    outline: none;
-}
-
-.contact-btn{
+.cer-inner-line, .project-inner-line, .contact-inner-line,.skill-inner-line{
+    width: 60px;
+    height: 3px;
     background-color: #f9a70d;
-    border: 1px solid gray;
-    padding: 1rem 1.4rem;
-    border-radius: 1rem;
-    font-size: 1rem;
-    line-height:1.5rem ;
-    font-weight: 400;
-   
-
 }
 
-.contact-btn:hover{
-     background-color: white;
-     
-    cursor: pointer;
-}
+        /* ====projects===== */
+        .project-container{
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            margin-top: 2rem;
+           
+        }
+        .projects {
+            margin-left: 2rem;
+            margin-right: 2rem;
+        }
+        .projects img{
+            max-width: 580px;
+            margin-bottom: 1.2rem;
+            border-radius: .8rem;
+        }
 
-/* footer--- */
-footer{
-    background-color:#011e4a ;
-}
-.footer{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    padding: 1.5rem ;
+        /* ====contact==== */
+        .contact-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            margin: 2rem 1.5rem;
+        }
+        .contact-subtitle2{
+            margin-top: 2.5rem;
+        }
+        .contact-info p{
+            margin-top: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+         .contact-btn{
+            padding: 1rem 1.4rem;
+        } 
 
-}
-
-.footer-icon a, i{
-    font-size: 1.7rem;
-    color:#fff ;
-    margin: 1rem;
-    
-}
-
-.footer-text{
-    font-size: 1.3rem;
-    color: white;
-    margin-right: 1.8rem;
-}
-
-/* media  */
-
-/* phone */
-@media screen and (max-width:600px){
-   
-
-    .nav-subtitle{
-        font-size: 1rem;
-        margin: 10px;
-    }
-    .nav-item{
-        display: flex;
-        float: right;
-        flex-wrap: wrap; 
-    }
-    .hero-container{
-        display: block;
-        max-width: 100%;
-      
-        
-    }
-
-    .hero-left img{
-        max-width:40% ;
-        border-radius: 50%;
-        height: auto;
-        margin: 0 auto;
-        display: block;
-     }
-     .hero-container .title{
-        text-align:center;
-        font-size: 1.5rem;
-    }
-    .hero-intro .description{  
-        display: block;
-        width: 100%;
-        font-size: .5rem;
-         text-align: center;
-    }
-
-     .porject-container{
-        display: grid;
-        max-width: 100%;
-        grid-template-columns: 1fr ;
-        margin: 30px;
-        height: auto;
-          
-    }
-   .resume-sub-container{
-        display: grid;
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-    .resume-title{
-        text-align: center;
-        color: black;
-        font-size: 1.3rem;
-        line-height: 2rem;
-        margin-top: 20px;
-    }
-    .resume-left,
-    .resume-right img{
-        width: 40%;
-    }
-
-    
-.resume-duration{
-    width: auto;
-    padding: 0.5rem .5rem;
-    font-size: .876rem;
-    line-height: 1rem;
-    
-}
-
-.resume-description h2{
- font-size: 1rem;
- line-height: 1rem;
- margin-bottom: .5rem;
- 
-}
-
-.resume-description h3{
-    font-size: 1.1rem;
-   line-height: 1.25rem;
-    margin: 0;
-    color: gray;   
-}
-
-    .skill-container,.resume-sub-container{
-        display: grid;
-        grid-template-columns: 1fr;
-        gap: 1rem;
-        margin-top: 1rem;
-    }
-
-    .contact-info a, p{
-        font-size: 1rem;
-    }
-    
-    form{
-        display: block;
-    }
-    
-    .input-field{
-      width: 100%;
-        padding: 0.74rem;
-        margin-bottom: 1rem;
-        margin-top: 10px;
-        font-size: 1rem;
-    }
-    
-    .contact-btn{
-        border: 1px solid gray;
-        padding: .3rem .4rem;
-        border-radius: 1rem;
-        font-size: .7rem;
-        line-height:1.2rem ;
-    }
-
-    .certificate-sub-container{
-       display: grid; 
-       grid-template-columns: 1fr;
-    }
-
-    .certificate-data{
-        display: flex;
-        border: 2px solid #c9c5c5;
-        width: 100%;
-        border-radius: 6px;
-        transition: transform 0.4s ease;
-    }
-    .certificate-data img{
-        height: 100%;
-        width: 100%;
-       
-    }
-    
-    .certificate-data:hover{
-        transform: translateY(-.5rem);
-    }
-    
-    
-    .certificate-data .data-info {
-        text-align: center;
-        align-items: center;
-        margin: 35px; 
-        font-size: .6rem;
-    
-    }
-    
-    .certificate-data .data-info a, i{
-        margin-top: 1.2rem;
-        color: gray;
-       font-size: .5rem;
-    }
-
-    body{
-        overflow-x: hidden; 
-        max-width: 100%;
-     }
-    
-    
+        /*==== footer===== */
+        .footer-content {
+            display: flex;
+            justify-content: space-evenly;
+            padding: 1.5rem ;
+        }
+        footer-icon a, i{
+            font-size: 1.7rem;
+            color:#fff ;
+            margin: 1rem; 
+        }
 }
 
 
 
-@media screen and  (min-width: 993px) {
-    .porject-container{
-        display: grid;
-        grid-template-columns:1fr 1fr 1fr ;
-        margin: 30px;
-        height: auto;
-        width: 100%;  
-    } 
-} 
 
-/* tablet */
-@media screen and (min-width:768px) and (max-width: 992px) {
-    .container {
-        max-width: 992px;
-    }
-    .certificate-sub-container{
-        display: grid; 
-        grid-template-columns: 1fr 1fr;
-     }
- 
-     .certificate-data{
-         display: flex;
-         border: 2px solid #c9c5c5;
-         width: 100%;
-         border-radius: 6px;
-         transition: transform 0.4s ease;
-     }
-     .certificate-data img{
-         height: 100%;
-         width: 100%;
-       
-     }
-     
-     .certificate-data:hover{
-         transform: translateY(-.5rem);
-     }
-     
-     
-     .certificate-data .data-info {
-         text-align: center;
-         align-items: center;
-         margin: 35px; 
-         font-size: .6rem;
-     
-     }
-     
-     .certificate-data .data-info a, i{
-         margin-top: 1.2rem;
-         color: gray;
-        font-size: .5rem;
-     }
-
-    .porject-container{
-        display: grid;
-        grid-template-columns:1fr  1fr ;
-        margin: 30px;
-        height: auto;
-        width: 100%;  
-    } 
-
-    .contact-container {
-        display: block;
-       
-    }
-    body{
-       overflow-x: hidden; 
-       max-width: 100%;
-    }
-}
 
 
 
